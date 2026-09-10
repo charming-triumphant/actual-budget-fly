@@ -1,22 +1,27 @@
-app = "actual-budget-fly-hpsvcw"
-primary_region = "syd"
+# fly.toml app configuration file generated for actual-budget-fly-hpsvcw on 2026-09-10T22:49:41Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'actual-budget-fly-hpsvcw'
+primary_region = 'syd'
 
 [build]
-  image = "actualbudget/actual-server:latest"
+  image = 'actualbudget/actual-server:latest'
+
+[[mounts]]
+  source = 'actual_data'
+  destination = '/data'
 
 [http_service]
   internal_port = 5006
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
-  disable_ipv6 = true
 
 [[vm]]
-  memory = "256mb"
-  cpu_kind = "shared"
+  memory = '256mb'
+  cpu_kind = 'shared'
   cpus = 1
-
-[mounts]
-  source = "actual_data"
-  destination = "/data"
+  memory_mb = 256
