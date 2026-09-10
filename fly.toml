@@ -1,0 +1,21 @@
+app = "charming-triumphant-actual"
+primary_region = "syd"
+
+[build]
+  image = "actualbudget/actual-server:latest"
+
+[http_service]
+  internal_port = 5006
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1
+
+[mounts]
+  source = "actual_data"
+  destination = "/data"

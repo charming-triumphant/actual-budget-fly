@@ -1,0 +1,12 @@
+# Fly.io
+fly.toml.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
