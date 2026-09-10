@@ -4,7 +4,7 @@ Deployed from `actualbudget/actual-server:latest` to Fly.io (Sydney region) with
 
 ## Files
 - `Dockerfile` - Uses official Actual Budget image
-- `fly.toml` - Fly.io configuration (app: `charming-triumphant-actual`, region: `syd`)
+- `fly.toml` - Fly.io configuration (app: `actual-budget-fly-hpsvcw`, region: `syd`)
 - `.gitignore` - Standard ignores
 
 ## One-time Setup (run after pushing to GitHub)
@@ -36,7 +36,7 @@ flyctl deploy
 ```
 
 ## App Details
-- **App name**: `charming-triumphant-actual`
+- **App name**: `actual-budget-fly-hpsvcw`
 - **Region**: Sydney (`syd`)
 - **Port**: 5006 (internal) → HTTPS (external)
 - **Volume**: `actual_data` (1GB) mounted at `/data`
@@ -44,4 +44,4 @@ flyctl deploy
 - **Auto-start**: Yes (wakes on request)
 
 ## Access
-After deploy: `https://charming-triumphant-actual.fly.dev`
+After deploy: `https://actual-budget-fly-hpsvcw.fly.dev`
